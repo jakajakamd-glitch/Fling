@@ -11,7 +11,7 @@
 local G2L = {};
 
 -- StarterGui.AuroraExeUI
-G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui");
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["DisplayOrder"] = 999999999;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
@@ -3622,7 +3622,7 @@ local function describe(it)
 	if it.key then table.insert(parts, "Key system") else table.insert(parts, "Keyless") end
 	if it.verified then table.insert(parts, "Verified") end
 	if it.isPatched == true or it.patched == true then table.insert(parts, "Patched") else table.insert(parts, "Working") end
-	return table.concat(parts, "  â€¢  ")
+	return table.concat(parts, "  •  ")
 end
 
 local function openAbout(it)
